@@ -30,10 +30,10 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
         <Link href="/">Jahanvi Chamria</Link>
         <div className="nav-links">
           <Link href="/#work">Work</Link>
+          <Link href="/#skills">Skills</Link>
+          <Link href="/#experience">Experience</Link>
           <Link href="/#about">About</Link>
-          <a href="https://github.com/JahanviChamria" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+          <Link href="/contact">Contact</Link>
         </div>
       </nav>
 
@@ -49,6 +49,11 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
             {project.wip && <em className="wip">in preparation</em>}
           </h1>
           <p className="detail-summary">{project.summary}</p>
+          {project.cta && (
+            <Link className="detail-cta mono" href={project.cta.href}>
+              {project.cta.label} →
+            </Link>
+          )}
         </header>
 
         <ul className="detail-highlights mono">

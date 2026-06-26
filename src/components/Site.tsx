@@ -7,6 +7,10 @@ import LensDial from "./LensDial";
 import ThreeBody from "./ThreeBody";
 import Backdrop from "./Backdrop";
 import Work from "./Work";
+import Skills from "./Skills";
+import Timeline from "./Timeline";
+import Credentials from "./Credentials";
+import { EDUCATION, EXPERIENCE, INVOLVEMENT } from "@/lib/content";
 
 export default function Site() {
   const [lens, setLens] = useState<LensKey>("all");
@@ -76,10 +80,10 @@ export default function Site() {
         <a href="/">Jahanvi Chamria</a>
         <div className="nav-links">
           <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
           <a href="#about">About</a>
-          <a href="https://github.com/JahanviChamria" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+          <a href="/contact">Contact</a>
         </div>
       </nav>
 
@@ -100,6 +104,19 @@ export default function Site() {
 
       <Work lens={lens} />
 
+      <Skills lens={lens} />
+
+      <Timeline id="experience" title="Experience" roles={EXPERIENCE} lens={lens} />
+
+      <Timeline
+        id="involvement"
+        title="Leadership & service"
+        roles={INVOLVEMENT}
+        lens={lens}
+      />
+
+      <Credentials />
+
       <section className="about" id="about" data-reveal>
         <span className="about-label mono">About</span>
         <div>
@@ -115,6 +132,29 @@ export default function Site() {
             Currently: growing peptide nanowires, building circuits, and
             teaching machines to read starlight.
           </p>
+
+          <dl className="edu mono">
+            <div className="edu-row">
+              <dt>Degree</dt>
+              <dd>{EDUCATION.degree}</dd>
+            </div>
+            <div className="edu-row">
+              <dt>School</dt>
+              <dd>{EDUCATION.school}</dd>
+            </div>
+            <div className="edu-row">
+              <dt>GPA</dt>
+              <dd>{EDUCATION.gpa}</dd>
+            </div>
+            <div className="edu-row">
+              <dt>Graduation</dt>
+              <dd>{EDUCATION.graduation}</dd>
+            </div>
+            <div className="edu-row">
+              <dt>Coursework</dt>
+              <dd>{EDUCATION.coursework.join(" · ")}</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
