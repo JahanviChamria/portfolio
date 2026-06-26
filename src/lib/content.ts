@@ -195,7 +195,7 @@ export interface Role {
 /** Research and work experience, most recent first. */
 export const EXPERIENCE: Role[] = [
   {
-    role: "AI Development & Automation Intern",
+    role: "AI Development & Automation",
     org: "FlowMatrix AI, Hamilton NY",
     period: "Nov 2025 – Present",
     note: "Built an AI system that turned 300+ pages of construction documentation into a searchable knowledge base. Stored the data in AWS S3 and a vector database so people can look up local building rules by postal code instead of digging through PDFs by hand.",
