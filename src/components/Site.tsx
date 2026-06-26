@@ -121,16 +121,14 @@ export default function Site() {
         <span className="about-label mono">About</span>
         <div>
           <p>
-            I&apos;m a physics &amp; computer science double major at Colgate
-            University, working across <span className="em">electronics</span>,{" "}
+            Physics and computer science student at Colgate University, working
+            across <span className="em">electronics</span>,{" "}
             <span className="em">machine learning</span>, and{" "}
-            <span className="em">experimental research</span>. The same instinct
-            runs through all of it: take a system apart, model it, build it back
-            better.
+            <span className="em">experimental physics</span>.
           </p>
           <p>
-            Currently: growing peptide nanowires, building circuits, and
-            teaching machines to read starlight.
+            Currently researching peptide nanowires, tutoring electricity &amp;
+            magnetism, and building simulations on the side.
           </p>
 
           <dl className="edu mono">
